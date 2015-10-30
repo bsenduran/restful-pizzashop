@@ -1,0 +1,22 @@
+Direct curl requests
+=====================
+curl -v http://localhost:8080/restful-pizzashop/rest/menu/order
+
+curl -v http://localhost:8080/restful-pizzashop/rest/menu/order/{id}
+
+curl -v -H "Content-Type: application/json" -d '{"id":125,"name":"BBQ Lovers","toppings":[{"id":987,"name":"Cheese","extraPrice":2.0,"category":"Vegetarian"}],"price":130.0}' localhost:8080/restful-pizzashop/rest/menu/add
+
+curl -v -X DELETE http://localhost:8080/restful-pizzashop/rest/menu/delete/{id}
+
+
+
+via GW
+======
+
+curl -v http://localhost:9090/pizza/order
+
+curl -v http://localhost:9090/pizza/order/{id}
+
+curl -v -H "Content-Type: application/json" -d '{"id":125,"name":"BBQ Lovers","toppings":[{"id":987,"name":"Cheese","extraPrice":2.0,"category":"Vegetarian"}],"price":130.0}' http://localhost:9090/pizza/order/new
+
+url -v -X DELETE http://localhost:9090/pizza/delete/{id}
